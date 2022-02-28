@@ -1,0 +1,23 @@
+.my_units{
+    margin: 5px;
+    height: 70vh; //rowのvhが100%なので上書き
+    padding-bottom: 50px; //フッターと被らないように
+    .col-2{
+        padding: 0 3px;
+        text-align: center;
+        .my_unit_img{
+            position: relative;
+            max-width: 100%;
+        }
+        .party_in_img, .element_flag_img{
+            position: absolute;
+            top: 0; left: 0;
+            max-width: 100%;
+            display: none;
+        }
+        .my_unit_level{
+            @include lineHeightCrop(1.5);
+            font-size: small;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+参考
+https://knmts.com/become-engineer-16/
+
+
+# node.js のインストール
+dnf install -y nodejs
+
+# バージョン確認（インストールされているかも確認）
+node -v
+npm -v
+
+# node用のポートのオープン
+firewall-cmd --add-port=3000/tcp --permanent
+firewall-cmd --reload
+firewall-cmd --list-all
+
+# ディレクトリ作成
+cd /home
+mkdir qizapp
+cd qizapp
+
+# npmの初期設定（全部エンターを押す）
+npm init
+
+npm install express
+npm view express version
+
+
+# /home/qizappに以下のファイルを作成
+app.js
+----
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World! I am Express.js!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+-----
+
+# サーバーの立ち上げて確認
+node app.js
+
+ctrl c でいったんサーバー終了させる
+
+# プロセス永続化用のパッケージを入れる（もし、エラーが出る場合はnpmで最新版に入れ替える）
+# -g　を入れて、グローバルから実行できるようにする
+# エラーがでたときはこちらを参照　https://qiita.com/yuta-38/items/a2a0bf5d7d5207dc9e32
+npm install -g forever
+
+
+
+# デーモンの立ち上げ
+forever start ./bin/www

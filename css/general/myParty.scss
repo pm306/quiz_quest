@@ -1,0 +1,41 @@
+.party_header{
+    margin: 10px;
+    span{
+        @include centering();
+        @include boldGoghic();
+    }
+}
+
+.left_offset{
+    #status_name div{
+        background-color: white;
+    }
+}
+
+.party_boxes{
+    margin: 0 5px;
+
+    .col-2{
+        padding: 0 3px;
+        .party_img, .party_offset{
+            max-width: 100%;
+        }
+    }
+}
+
+.status_name{
+    div{
+        margin: 3px 0;
+        @include boldGoghic();
+    }
+}
+
+.party_status{
+    text-align: right;
+
+    div{
+        background-color: lavender;
+        margin: 3px 0;
+        @include boldGoghic();
+    }
+}

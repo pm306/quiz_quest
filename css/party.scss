@@ -1,0 +1,26 @@
+@import "general/myParty.scss";
+@import "general/myUnit.scss";
+@import "general/function.scss";
+
+.row{
+    position:relative;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.confirm_button_parent{
+    text-align: center;
+    .confirm_button{
+        font-size: large;
+
+        @include boldGoghic();
+        margin: 10px 0;
+        padding: 5px 0;
+        max-width: 100%;
+        background-clip: padding-box;
+        background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+        border: medium solid #4169e1;
+        cursor: pointer;
+    }
+}
+

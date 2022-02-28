@@ -1,0 +1,104 @@
+@mixin boldGoghic() {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+@mixin centering() {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+@mixin lineHeightCrop($line-height) {
+    &::before {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: calc((1 - #{$line-height}) * .5em);
+      content: "";
+    }
+    &::after {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-bottom: calc((1 - #{$line-height}) * .5em);
+      content: "";
+    }
+}
+
+.row{
+    position:relative;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.level_up_unit{
+    padding: 10px 0;
+}
+
+.col-3, .col-4, .col-5{
+    padding: 0 3px;
+}
+
+.level_up_icon{
+    img{
+        max-width: 100%;
+    }
+}
+
+.status_name, .status_value{
+    margin-top: 10px;
+    div{
+        @include boldGoghic();
+        .experience_bar{
+            max-width: 100px;
+        }
+    }
+}
+
+.element_units{
+    .col-2{
+        padding: 0 3px;
+    }
+    div .element_img{
+        max-width: 100%;
+    }
+}
+
+.my_units{
+    margin: 5px;
+    .col-2{
+        padding: 0 3px;
+        text-align: center;
+        .my_unit_img{
+            position: relative;
+            max-width: 100%;
+        }
+        .party_in_img, .select_element_img{
+            position: absolute;
+            top: 0; left: 0;
+            max-width: 100%;
+            display: none;
+        }
+        .my_unit_level{
+            @include lineHeightCrop(1.5);
+            font-size: small;
+        }
+    }
+}
+
+.level_up_button_parent{
+    text-align: center;
+    .level_up_button{
+        font-size: large;
+
+        @include boldGoghic();
+        margin: 10px 0;
+        padding: 5px 0;
+        max-width: 100%;
+        background-clip: padding-box;
+        background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+        border: medium solid #4169e1;
+        cursor: pointer;
+    }
+}

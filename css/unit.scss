@@ -1,0 +1,29 @@
+@import "general/function.scss";
+@import "general/myParty.scss";
+
+.row{
+    position:relative;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.buttons_top{
+    .organization_buttons{
+        margin-top: 10px;
+        text-align: center;
+
+        .col-6 .button{
+            @include boldGoghic();
+
+            max-width: 100%;
+            padding: 15px 5px;
+            margin: 5px 0;
+
+            background-clip: padding-box;
+            background: radial-gradient(#FFFFFF,#EFFFFF 60%, #CCFFFF);
+
+            border: medium solid #4169e1;
+            cursor : pointer;
+        }
+    }
+}

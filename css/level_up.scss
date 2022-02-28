@@ -1,0 +1,65 @@
+@import "general/myUnit.scss";
+@import "general/function.scss";
+
+.row{
+    position:relative;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.level_up_unit{
+    padding: 10px 0;
+}
+
+.col-3, .col-4, .col-5{
+    padding: 0 3px;
+}
+
+.level_up_icon{
+    img{
+        max-width: 100%;
+    }
+}
+
+$green_bar:linear-gradient(90deg,#0b9952,#6eeb6e);
+.status_name, .status_value{
+    margin-top: 10px;
+    div{
+        @include boldGoghic();
+        .experience_bar{
+            @include progressBarGradation($green_bar);
+            width:80%;
+            border: solid 2px;
+        }
+     }
+}
+
+.element_units{
+    margin-top: 5px;
+    .col-2{
+        padding: 0 3px;
+    }
+    div .element_img{
+        max-width: 100%;
+    }
+}
+
+.level_up_button_parent{
+    text-align: center;
+    .level_up_button{
+        font-size: large;
+
+        @include boldGoghic();
+        margin: 10px 0;
+        padding: 5px 0;
+        max-width: 100%;
+        background-clip: padding-box;
+        background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+        border: medium solid #4169e1;
+        cursor: pointer;
+    }
+}
+
+
+
+

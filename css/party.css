@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* mixinまとめ　後で分割するかも */
+/* 太字ゴシック */
+/* 文字の中央ぞろえ */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.my_units {
+  margin: 5px;
+  height: 70vh;
+  padding-bottom: 50px;
+}
+
+.my_units .col-2 {
+  padding: 0 3px;
+  text-align: center;
+}
+
+.my_units .col-2 .my_unit_img {
+  position: relative;
+  max-width: 100%;
+}
+
+.my_units .col-2 .party_in_img, .my_units .col-2 .element_flag_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  display: none;
+}
+
+.my_units .col-2 .my_unit_level {
+  font-size: small;
+}
+
+.my_units .col-2 .my_unit_level::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1.5) * .5em);
+  content: "";
+}
+
+.my_units .col-2 .my_unit_level::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1.5) * .5em);
+  content: "";
+}
+
+/* mixinまとめ　後で分割するかも */
+/* 太字ゴシック */
+/* 文字の中央ぞろえ */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.row {
+  position: relative;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.party_header {
+  margin: 10px;
+}
+
+.party_header span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.party_header span::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 2) * .5em);
+  content: "";
+}
+
+.party_header span::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 2) * .5em);
+  content: "";
+}
+
+.left_offset #status_name div {
+  background-color: white;
+}
+
+.party_boxes {
+  margin: 0 5px;
+}
+
+.party_boxes .col-2 {
+  padding: 0 3px;
+}
+
+.party_boxes .col-2 .party_img, .party_boxes .col-2 .party_offset {
+  max-width: 100%;
+}
+
+.status_name div {
+  margin: 3px 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.party_status {
+  text-align: right;
+}
+
+.party_status div {
+  background-color: lavender;
+  margin: 3px 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.confirm_button_parent {
+  text-align: center;
+}
+
+.confirm_button_parent .confirm_button {
+  font-size: large;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 10px 0;
+  padding: 5px 0;
+  max-width: 100%;
+  background-clip: padding-box;
+  background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+  border: medium solid #4169e1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=party.css.map */

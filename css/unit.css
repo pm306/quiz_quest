@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* mixinまとめ　後で分割するかも */
+/* 太字ゴシック */
+/* 文字の中央ぞろえ */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.party_header {
+  margin: 10px;
+}
+
+.party_header span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.left_offset #status_name div {
+  background-color: white;
+}
+
+.party_boxes {
+  margin: 0 5px;
+}
+
+.party_boxes .col-2 {
+  padding: 0 3px;
+}
+
+.party_boxes .col-2 .party_img, .party_boxes .col-2 .party_offset {
+  max-width: 100%;
+}
+
+.status_name div {
+  margin: 3px 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.party_status {
+  text-align: right;
+}
+
+.party_status div {
+  background-color: lavender;
+  margin: 3px 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.row {
+  position: relative;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.buttons_top .organization_buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.buttons_top .organization_buttons .col-6 .button {
+  font-weight: bold;
+  font-family: sans-serif;
+  max-width: 100%;
+  padding: 15px 5px;
+  margin: 5px 0;
+  background-clip: padding-box;
+  background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+  border: medium solid #4169e1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=unit.css.map */

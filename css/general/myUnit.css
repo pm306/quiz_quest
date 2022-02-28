@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* mixinまとめ　後で分割するかも */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.my_units {
+  margin: 5px;
+  height: 70vh;
+  padding-bottom: 50px;
+}
+
+.my_units .col-2 {
+  padding: 0 3px;
+  text-align: center;
+}
+
+.my_units .col-2 .my_unit_img {
+  position: relative;
+  max-width: 100%;
+}
+
+.my_units .col-2 .party_in_img, .my_units .col-2 .element_flag_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  display: none;
+}
+
+.my_units .col-2 .my_unit_level {
+  font-size: small;
+}
+
+.my_units .col-2 .my_unit_level::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1.5) * .5em);
+  content: "";
+}
+
+.my_units .col-2 .my_unit_level::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1.5) * .5em);
+  content: "";
+}
+/*# sourceMappingURL=MyUnit.css.map */

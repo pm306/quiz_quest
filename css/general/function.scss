@@ -1,0 +1,44 @@
+/* mixinまとめ　後で分割するかも */
+
+/* 太字ゴシック */
+@mixin boldGoghic() {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/* 文字の中央ぞろえ */
+@mixin centering() {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+/* テキストの上下を埋める */
+@mixin lineHeightCrop($line-height) {
+    &::before {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: calc((1 - #{$line-height}) * .5em);
+      content: "";
+    }
+    &::after {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-bottom: calc((1 - #{$line-height}) * .5em);
+      content: "";
+    }
+}
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+@mixin progressBarGradation($gradation){
+    background: $gradation;
+    &::-moz-progress-bar{
+        background: $gradation;
+    }
+    &::-webkit-progress-value{
+        background: $gradation;
+    }
+}

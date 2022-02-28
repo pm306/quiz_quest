@@ -1,0 +1,475 @@
+/* 共通 */
+
+
+.row{
+    position:relative;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.phase_start_img{
+	max-width: 100%;
+    height: auto;
+}
+
+/* HPバーの色 */
+.red_bar{
+	background: linear-gradient(90deg,#f80707,#f07c4e);
+}
+.red_bar::-moz-progress-bar{
+	background: linear-gradient(90deg,#f80707,#f07c4e);
+}
+.red_bar::-webkit-progress-value{
+	background: linear-gradient(90deg,#f80707,#f07c4e);
+}
+
+.yellow_bar{
+	background: linear-gradient(90deg,#ffbc02,#f3e332);
+}
+.yellow_bar::-moz-progress-bar {
+	background: linear-gradient(90deg,#ffbc02,#f3e332);
+}
+.yellow_bar::-webkit-progress-value {
+	background: linear-gradient(90deg,#ffbc02,#f3e332);
+}
+
+.blue_bar{
+	background: linear-gradient(90deg,#3366CC,#33CCFF);
+}
+.blue_bar::-moz-progress-bar {
+	background: linear-gradient(90deg,#3366CC,#33CCFF);
+}
+.blue_bar::-webkit-progress-value {
+	background: linear-gradient(90deg,#3366CC,#33CCFF);
+}
+
+.green_bar{
+	background: linear-gradient(90deg,#0b9952,#6eeb6e);
+}
+.green_bar::-moz-progress-bar {
+	background: linear-gradient(90deg,#0b9952,#6eeb6e);
+  }
+.green_bar::-webkit-progress-value {
+	background: linear-gradient(90deg,#0b9952,#6eeb6e);
+}
+
+.stage_clear_img{
+	position: absolute;
+	left:0; top:0;
+	text-align: center;
+	width: 100%; height: 100%;
+	object-fit: cover; /*画像が潰れないように、縦横比を維持したままリサイズする */
+	display: none;
+}
+
+/* 敵キャラクター */
+.enemy_boxes{
+	margin: 20px 20px 0;
+}
+.enemy_boxes .col-4{
+	padding :0 5px;
+}
+@media screen and (min-width:768px){
+	.enemy_boxes{
+		margin: 20px 80px 0;
+	}
+	.enemy_boxes .col-4{
+		padding :0 15px;
+	}
+}
+
+.enemy_box{
+	position: relative;
+}
+.enemy_img{
+	max-width:100%;
+	opacity: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.enemy_hp{
+	margin-top: 1px;
+	border: solid black;
+	border-width: 1px;
+	border-bottom-width: 3px;
+	height: 17px;
+	width: 85%;
+	margin-left: 15%;
+	opacity: 0;
+}
+
+.enemy_particle{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left: 0px;
+    top: 0px;
+}
+
+/* 消滅時の回転エフェクト */
+.rotate_animation{
+	-webkit-animation: flip-vertical-right 0.25s linear infinite both;
+	        animation: flip-vertical-right 0.25s linear infinite both;
+}
+
+@-webkit-keyframes flip-vertical-right {
+	0% {
+	  -webkit-transform: rotateY(0);
+			  transform: rotateY(0);
+	}
+	100% {
+	  -webkit-transform: rotateY(180deg);
+			  transform: rotateY(180deg);
+	}
+  }
+@keyframes flip-vertical-right {
+	0% {
+	  -webkit-transform: rotateY(0);
+			  transform: rotateY(0);
+	}
+	100% {
+	  -webkit-transform: rotateY(180deg);
+			  transform: rotateY(180deg);
+	}
+}
+
+.hero_boxes{
+	margin: 10px 10px 0;
+}
+.hero_boxes .col{
+	padding :0 3px;
+}
+ @media screen and (min-width:768px){
+	.hero_boxes{
+		margin: 20px 20px 0;
+	}
+	.hero_boxes .col{
+		padding :0 10px;
+	}
+}
+
+.hero_hp{
+	margin-top: 5px;
+	border: solid black;
+	border-width: 1.5px;
+	border-bottom-width: 2px;
+	max-height: 13px;
+	width: 100%;
+}
+
+/* 味方キャラのアイコン */
+.hero_img{
+	max-width:100%;
+	margin-top: 10px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.img_emphasize{
+	animation: updown 1.0s 1;
+}
+@keyframes updown{
+    0%  {
+		transform: translate(0,0px);
+	}
+	35% {
+		transform: translate(0,-15px);
+	}
+    65% {
+		 transform: translate(0,-15px);
+	}
+	100%{
+		transform: translate(0,0px);
+	}
+}
+
+
+.hero_particle{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left: 0px;
+    top: 0px;
+}
+
+.darken{
+	filter:brightness(50%);
+}
+
+/* 解答ボタン系 */
+
+/*
+	デフォルトだと画像が横並びになるので横並びにならないよう上書きする
+*/
+.modal-header{
+	display:inline;
+}
+
+.answer_top_img{
+	max-width: 100%;
+}
+
+.answer_box_img{
+	max-width: 100%;
+}
+
+.member_tabel {
+    margin-left: auto;
+    margin-right: auto;
+	max-width:100%;
+}
+.member_td{
+	max-width:100%;
+}
+
+.genre_top{
+	width:100%;
+}
+.genre_label{
+	width:100%;
+	text-align:center;
+}
+
+
+
+.genre_box{
+	position:relative;
+
+	max-width: 100%;
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	background-clip: padding-box;
+	background: radial-gradient(#FFFFFF,#EFFFFF 60%, #CCFFFF);
+
+	border: medium solid #4169e1;
+	border-bottom-width:6px;
+	border-radius: 10px;
+	cursor : pointer;
+}
+
+@media screen and (min-width:768px){
+	.genre_box {
+		position:relative;
+
+		max-width: 100%;
+		padding: 8px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		background-clip: padding-box;
+		background: radial-gradient(#FFFFFF,#EFFFFF 60%, #CCFFFF);
+
+		border: medium solid #4169e1;
+		border-bottom-width:6px;
+		border-radius: 10px;
+		cursor : pointer;
+	}
+}
+
+.bottom_box{
+	height: 60px;
+}
+
+.answer_box{
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: thin solid #808080;
+	border-bottom: thin solid #808080;
+	cursor : pointer;
+}
+.answer_end{
+	cursor : not-allowed;
+}
+.answer_box_gray{
+	background-color: #e0e0e0;
+}
+.answer_ng{
+	cursor : not-allowed;
+}
+.answer_maru_batsu{
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	max-height: 100%;
+	opacity: 0.5;
+}
+
+.answer_check_overlay{
+	position: absolute;
+	left: 0; top: 0;
+	text-align: center;
+	width: 100%; height: 100%;
+	background: rgba(100, 100, 100, 0.0);
+	display: none;
+	z-index: -1;
+}
+
+.answer_check_img{
+    max-width: 100%;
+    opacity:0.5;
+}
+
+#answer_check_overlay_1{
+	animation: answer_check_animation_1_perfect 1.5s infinite;
+}
+#answer_check_overlay_2{
+	animation: answer_check_animation_2_great 1.5s infinite;
+}
+#answer_check_overlay_3{
+	animation: answer_check_animation_3_nice 1.5s infinite;
+}
+#answer_check_overlay_4{
+	animation: answer_check_animation_4_ok 1.5s infinite;
+}
+#answer_check_overlay_5{
+	animation: answer_check_animation_5_miss 1.5s infinite;
+}
+
+@keyframes answer_check_animation_1_perfect {
+	10% {transform: scale(0.80);}
+	25% {transform: scale(1.20);}
+	40% {transform: scale(0.80);}
+	60% {transform: scale(1.20);}
+	80% {transform: scale(0.80);}
+	95% {transform: scale(1.20);}
+}
+
+@keyframes answer_check_animation_2_great {
+	10% {transform: scale(0.90);}
+	25% {transform: scale(1.14);}
+	40% {transform: scale(0.90);}
+	60% {transform: scale(1.14);}
+	80% {transform: scale(0.90);}
+	95% {transform: scale(1.14);}
+}
+
+@keyframes answer_check_animation_3_nice {
+	10% {transform: scale(0.92);}
+	25% {transform: scale(1.12);}
+	40% {transform: scale(0.92);}
+	60% {transform: scale(1.12);}
+	80% {transform: scale(0.92);}
+	95% {transform: scale(1.12);}
+}
+
+@keyframes answer_check_animation_4_ok {
+	10% {transform: scale(0.95);}
+	25% {transform: scale(1.05);}
+	40% {transform: scale(0.95);}
+	60% {transform: scale(1.05);}
+	80% {transform: scale(0.95);}
+	95% {transform: scale(1.05);}
+}
+
+@keyframes answer_check_animation_5_miss {
+	10% {transform: scale(0.97);}
+	25% {transform: scale(1.03);}
+	40% {transform: scale(0.97);}
+	60% {transform: scale(1.03);}
+	80% {transform: scale(0.97);}
+	95% {transform: scale(1.03);}
+}
+
+
+.answer_time_box{
+	position: relative;
+}
+.answer_time{
+	width: 100%;
+	color: lightblue;
+	position: relative;
+}
+#answer_time_bou{
+	position: absolute;
+	width: 100%;
+	padding-left: 70%;
+	top: -4px;
+}
+
+ /*ジャンル選択時の色アイコン*/
+.color_icon{
+	max-height: 30px;
+	vertical-align:middle;
+}
+@media screen and (min-width: 768px){
+	.color_icon{
+		max-height: 50px;
+		vertical-align:middle;
+	}
+}
+
+/* ジャンル選択時のテキスト 書体は太字ゴシック*/
+.genre_text{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 17px;
+	vertical-align:middle;
+}
+@media screen and (min-width: 768px){
+	.genre_text{
+		font-weight: bold;
+		font-family: sans-serif;
+		font-size: 20px;
+		vertical-align:middle;
+	}
+}
+
+/* 動的に付加するクラス プロパティが重複すると下に書いたクラスが優先される */
+
+/* jQueryのfadeOutメソッドを使うとレイアウトが崩れるため透明化している */
+.fadeout {
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	transition: all 1.5s;
+	opacity: 0;
+}
+.fadein {
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	transition: all 1.5s;
+	opacity: 1;
+}
+
+.phase_start_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s linear;
+	animation: .3s linear overlay-close;
+  }
+.phase_start_overlay.is_open {
+	opacity: 1;
+	visibility: visible;
+	animation: .3s linear overlay-open;
+ }
+  @keyframes overlay-open {
+	0% {
+	  transform: scaleX(0);
+	  transform-origin: left;
+	}
+	100% {
+	  transform: scaleX(1);
+	  transform-origin: left;
+	}
+  }
+  @keyframes overlay-close {
+	0% {
+	  transform: scaleX(1);
+	  transform-origin: right;
+	}
+	100% {
+	  transform: scaleX(0);
+	  transform-origin: right;
+	}
+}
+
+

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* mixinまとめ　後で分割するかも */
+/* 太字ゴシック */
+/* 文字の中央ぞろえ */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.my_units {
+  margin: 5px;
+  height: 70vh;
+  padding-bottom: 50px;
+}
+
+.my_units .col-2 {
+  padding: 0 3px;
+  text-align: center;
+}
+
+.my_units .col-2 .my_unit_img {
+  position: relative;
+  max-width: 100%;
+}
+
+.my_units .col-2 .party_in_img, .my_units .col-2 .element_flag_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  display: none;
+}
+
+.my_units .col-2 .my_unit_level {
+  font-size: small;
+}
+
+.my_units .col-2 .my_unit_level::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: calc((1 - 1.5) * .5em);
+  content: "";
+}
+
+.my_units .col-2 .my_unit_level::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: calc((1 - 1.5) * .5em);
+  content: "";
+}
+
+/* mixinまとめ　後で分割するかも */
+/* 太字ゴシック */
+/* 文字の中央ぞろえ */
+/* テキストの上下を埋める */
+/** プログレスバーの色を設定する
+ *  class: プログレスバーのクラス名
+ *  width: プログレスバーの幅
+ *  gradation: プログレスバーのグラデーション
+ */
+.row {
+  position: relative;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.level_up_unit {
+  padding: 10px 0;
+}
+
+.col-3, .col-4, .col-5 {
+  padding: 0 3px;
+}
+
+.level_up_icon img {
+  max-width: 100%;
+}
+
+.status_name, .status_value {
+  margin-top: 10px;
+}
+
+.status_name div, .status_value div {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.status_name div .experience_bar, .status_value div .experience_bar {
+  background: -webkit-gradient(linear, left top, right top, from(#0b9952), to(#6eeb6e));
+  background: linear-gradient(90deg, #0b9952, #6eeb6e);
+  width: 80%;
+  border: solid 2px;
+}
+
+.status_name div .experience_bar::-moz-progress-bar, .status_value div .experience_bar::-moz-progress-bar {
+  background: linear-gradient(90deg, #0b9952, #6eeb6e);
+}
+
+.status_name div .experience_bar::-webkit-progress-value, .status_value div .experience_bar::-webkit-progress-value {
+  background: -webkit-gradient(linear, left top, right top, from(#0b9952), to(#6eeb6e));
+  background: linear-gradient(90deg, #0b9952, #6eeb6e);
+}
+
+.element_units {
+  margin-top: 5px;
+}
+
+.element_units .col-2 {
+  padding: 0 3px;
+}
+
+.element_units div .element_img {
+  max-width: 100%;
+}
+
+.level_up_button_parent {
+  text-align: center;
+}
+
+.level_up_button_parent .level_up_button {
+  font-size: large;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 10px 0;
+  padding: 5px 0;
+  max-width: 100%;
+  background-clip: padding-box;
+  background: radial-gradient(#FFFFFF, #EFFFFF 60%, #CCFFFF);
+  border: medium solid #4169e1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=level_up.css.map */
